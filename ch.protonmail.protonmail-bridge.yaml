@@ -48,7 +48,7 @@ modules:
         export GOPATH=$PWD/go
         go version
         cd go/src/github.com/ProtonMail/proton-bridge
-        /app/bin/qtdeploy -ldflags -tags=pmapi_prod build desktop
+        make build
       - install -Dp -m 644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dp -m 644 cmd/Desktop-Bridge/deploy/linux/logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dp -m 644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
