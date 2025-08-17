@@ -82,6 +82,9 @@ modules:
       - type: patch
         path: patches/makefile-dont-update-submodules.patch
         dest: go/src/github.com/ProtonMail/proton-bridge
+      - type: patch
+        path: patches/no-vcpkg.patch
+        dest: go/src/github.com/ProtonMail/proton-bridge
       - type: file
         path: ch.protonmail.protonmail-bridge.metainfo.xml
       - type: file
