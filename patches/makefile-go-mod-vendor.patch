@@ -1,0 +1,31 @@
+diff --git a/Makefile b/Makefile
+index f22c50df..a6f7a8d4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -91,7 +91,7 @@ ifeq "${TARGET_OS}" "darwin"
+ 	mv ${BRIDGE_EXE} ${BRIDGE_EXE_NAME}
+ endif
+ 
+-go-build=go build $(1) -o $(2) $(3)
++go-build=go build -mod=vendor $(1) -o $(2) $(3)
+ go-build-finalize=${go-build}
+ ifeq "${GOOS}-$(shell uname -m)" "darwin-arm64"
+ 	go-build-finalize= \
+@@ -115,7 +115,7 @@ build-launcher: ${RESOURCE_FILE}
+ 	$(call go-build-finalize,${BUILD_FLAGS_LAUNCHER},"${LAUNCHER_EXE}","${ROOT_DIR}/${LAUNCHER_PATH}/","${ROOT_DIR}/${LAUNCHER_PATH}/${RESOURCE_FILE}")
+ 
+ versioner:
+-	go build ${BUILD_FLAGS} -o versioner utils/versioner/main.go
++	go build -mod=vendor ${BUILD_FLAGS} -o versioner utils/versioner/main.go
+ 
+ vault-editor:
+ 	$(call go-build-finalize,-tags=debug,"vault-editor","./utils/vault-editor/main.go")
+@@ -124,7 +124,7 @@ bridge-rollout:
+ 	$(call go-build-finalize,, "bridge-rollout","./utils/bridge-rollout/bridge-rollout.go")
+ 
+ hasher:
+-	go build -o hasher utils/hasher/main.go
++	go build -mod=vendor -o hasher utils/hasher/main.go
+ 
+ ${TGZ_TARGET}: ${DEPLOY_DIR}/${TARGET_OS}
+ 	rm -f $@
