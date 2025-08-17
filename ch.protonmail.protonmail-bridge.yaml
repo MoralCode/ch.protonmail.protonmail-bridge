@@ -73,6 +73,9 @@ modules:
         commit: 4cc2ded00158e92f7ab38e44fffc1cf09c8bd790
         dest: go/src/github.com/ProtonMail/proton-bridge
       - type: file
+        path: patches/Makefile
+        dest: go/src/github.com/ProtonMail/proton-bridge
+      - type: file
         path: ch.protonmail.protonmail-bridge.metainfo.xml
       - type: file
         path: ch.protonmail.protonmail-bridge.desktop
