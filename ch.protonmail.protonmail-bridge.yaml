@@ -56,15 +56,15 @@ modules:
       - ln -s /app/lib/protonmail/bridge/protonmail-bridge /app/bin/
 
       # from deb
-      - ar x protonmail-bridge.deb
-      - tar -xf data.tar.gz
-      - mv usr/lib/* /app/lib/
-      - install -Dp -m 644 usr/share/icons/hicolor/scalable/apps/protonmail-bridge.svg
-        /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - install -Dp -m 644 usr/share/applications/protonmail-bridge.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - desktop-file-edit --set-key="Icon" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
-      - desktop-file-edit --set-key="Categories" --set-value="Office;Email" /app/share/applications/${FLATPAK_ID}.desktop
-      - ln -s /app/lib/protonmail/bridge/proton-bridge /app/bin/protonmail-bridge
+      # - ar x protonmail-bridge.deb
+      # - tar -xf data.tar.gz
+      # - mv usr/lib/* /app/lib/
+      # - install -Dp -m 644 usr/share/icons/hicolor/scalable/apps/protonmail-bridge.svg
+      #   /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      # - install -Dp -m 644 usr/share/applications/protonmail-bridge.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      # - desktop-file-edit --set-key="Icon" --set-value=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
+      # - desktop-file-edit --set-key="Categories" --set-value="Office;Email" /app/share/applications/${FLATPAK_ID}.desktop
+      # - ln -s /app/lib/protonmail/bridge/proton-bridge /app/bin/protonmail-bridge
 
     sources:
       - sources.yml
