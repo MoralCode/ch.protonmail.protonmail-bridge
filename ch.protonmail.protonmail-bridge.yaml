@@ -69,7 +69,7 @@ modules:
       - ln -s /app/lib/protonmail/bridge/proton-bridge /app/bin/protonmail-bridge
 
     sources:
-      - sources.json
+      - sources.yml
       - type: archive
         url: https://github.com/ProtonMail/proton-bridge/archive/v1.3.3.tar.gz
         sha256: 613907baa5d5c93cebb2581adeb7259eab750cebe04a9db6873b592138686209
