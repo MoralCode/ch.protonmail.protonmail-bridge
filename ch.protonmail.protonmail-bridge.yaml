@@ -46,6 +46,7 @@ modules:
         . /usr/lib/sdk/golang/enable.sh
         export GOPATH=$PWD/go
         go version
+        mv vendor go/src/github.com/ProtonMail/proton-bridge/
         cd go/src/github.com/ProtonMail/proton-bridge
         make build
       - install -Dp -m 644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
