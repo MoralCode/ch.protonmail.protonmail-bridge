@@ -1,0 +1,18 @@
+diff --git a/internal/frontend/bridge-gui/bridge-gui/build.sh b/internal/frontend/bridge-gui/bridge-gui/build.sh
+index 1b1e1ee4..4c8b040b 100755
+--- a/internal/frontend/bridge-gui/bridge-gui/build.sh
++++ b/internal/frontend/bridge-gui/bridge-gui/build.sh
+@@ -60,10 +60,10 @@ BRIDGE_TAG=${BRIDGE_TAG:-"NOTAG"}
+ BRIDGE_DSN_SENTRY=${BRIDGE_DSN_SENTRY}
+ BRIDGE_BUILD_TIME=${BRIDGE_BUILD_TIME}
+ BRIDGE_BUILD_ENV=${BRIDGE_BUILD_ENV:-"dev"}
+-git submodule update --init --recursive ${VCPKG_ROOT}
+-check_exit "Failed to initialize vcpkg as a submodule."
++# git submodule update --init --recursive ${VCPKG_ROOT}
++# check_exit "Failed to initialize vcpkg as a submodule."
+ 
+-echo submodule updated
++# echo submodule updated
+ 
+ VCPKG_EXE="${VCPKG_ROOT}/vcpkg"
+ VCPKG_BOOTSTRAP="${VCPKG_ROOT}/bootstrap-vcpkg.sh"
